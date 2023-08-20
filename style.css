@@ -1,0 +1,20 @@
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+  }
+  
+  button {
+    position: fixed;
+    top: 1rem;
+    left: calc(50% - 3rem);
+    width: 6rem;
+  }
+  
+  div {
+    width: 20%;
+  }
