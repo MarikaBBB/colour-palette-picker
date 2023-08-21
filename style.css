@@ -55,6 +55,38 @@ p {
 }
 
 
+/* Mobile Portrait Styles */
+@media only screen and (max-width: 480px) {
+  header {
+    padding: 10px; /* Reduce padding for header on mobile */
+    flex-direction: column; /* Stack header content vertically on mobile */
+    align-items: center; 
+    text-align: center; 
+  }
+
+  button {
+    margin-top: 10px; 
+  }
+
+  p {
+    margin: 10px; 
+  }
+
+  .container {
+    flex-direction: column; /* Stack container divs vertically on mobile */
+  }
+
+  .container > div {
+    flex: 1;
+    margin: 5px; 
+  }
+
+}
+
+
+
+
+
 
 
 
