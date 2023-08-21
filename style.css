@@ -54,7 +54,6 @@ p {
   flex: 1;
 }
 
-
 /* Mobile Portrait Styles */
 @media only screen and (max-width: 480px) {
   header {
@@ -78,11 +77,9 @@ p {
     flex-wrap: nowrap; /* Prevent container divs from wrapping on mobile */
   }
 
-
   .container > div {
     flex: 1; 
   }
-
 }
 
 
