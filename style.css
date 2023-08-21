@@ -77,9 +77,6 @@ p {
     flex-wrap: nowrap; /* Prevent container divs from wrapping on mobile */
   }
 
-  .container > div {
-    flex: 1; 
-  }
 }
 
 
