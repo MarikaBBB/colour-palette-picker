@@ -73,7 +73,7 @@ p {
   }
 
   .container {
-    flex-direction: column; /* Stack container divs vertically on mobile */
+    flex-direction: row; /* Stack container divs horizontally on mobile */
   }
 
   .container > div {
