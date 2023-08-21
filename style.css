@@ -80,8 +80,7 @@ p {
 
 
   .container > div {
-    flex: 1;
-    margin: 5px; 
+    flex: 1; 
   }
 
 }
