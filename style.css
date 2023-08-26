@@ -73,11 +73,15 @@ p {
   }
 
   .container {
-    flex-direction: column; /* Align container divs in a row on mobile */
-
+    display: flex; /* Display the container divs horizontally on mobile */
+    flex-direction: row; /* Align container divs in a row on mobile */
+    flex-wrap: wrap; /* Wrap the items to multiple lines */
+    justify-content: space-between; 
   }
 
   .container > div {
+    width: calc(20% - 10px);
+    margin: 5px;
     flex: none; 
   }
 
