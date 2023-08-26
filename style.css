@@ -74,13 +74,12 @@ p {
 
   .container {
     display: flex; /* Display the container divs horizontally on mobile */
-    flex-direction: row;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /
   }
 
   .container > div {
-    flex: none;
+    flex: 1;
   }
 
 }
