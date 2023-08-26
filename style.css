@@ -74,13 +74,13 @@ p {
 
   .container {
     display: flex; /* Display the container divs horizontally on mobile */
-    flex-direction: row; /* Align container divs in a row on mobile */
-    flex-wrap: wrap; /* Wrap the items to multiple lines */
-    justify-content: space-between; 
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /
   }
 
   .container > div {
-    flex: 1; 
+    width: calc(20% - 10px); /* Calcola la larghezza in modo che ci siano cinque colori per riga con margine */
+    margin: 5px;
   }
 
 }
