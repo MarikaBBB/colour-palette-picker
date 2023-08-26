@@ -57,7 +57,7 @@ p {
 /* Mobile Portrait Styles */
 @media only screen and (max-width: 480px) {
   header {
-    padding: 10px; /* Reduce padding for header on mobile */
+    padding: 10px;
     flex-direction: column; /* Stack header content vertically on mobile */
     align-items: center; 
     text-align: center; 
@@ -65,6 +65,7 @@ p {
 
   button {
     margin-top: 10px; 
+    margin-left: 0;
   }
 
   p {
@@ -72,9 +73,12 @@ p {
   }
 
   .container {
-    display: flex; /* Display the container divs horizontally on mobile */
-    flex-direction: row; /* Align container divs in a row on mobile */
-    flex-wrap: nowrap; /* Prevent container divs from wrapping on mobile */
+    flex-direction: column; /* Align container divs in a row on mobile */
+
+  }
+
+  .container > div {
+    flex: none; 
   }
 
 }
