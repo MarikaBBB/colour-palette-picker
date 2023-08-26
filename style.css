@@ -79,8 +79,7 @@ p {
   }
 
   .container > div {
-    width: calc(20% - 10px); /* Calcola la larghezza in modo che ci siano cinque colori per riga con margine */
-    margin: 5px;
+    flex: none;
   }
 
 }
