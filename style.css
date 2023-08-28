@@ -47,7 +47,6 @@ h1 {
 p {
   margin-top: 10px;
   margin-left: 150px;
-  text-align: center;
 }
 
 .container {
@@ -123,11 +122,11 @@ button, .lock-toggle {
     margin: 5px auto; 
   }
 
-  .colour {
+  /*.colour {
     flex-direction:column;
     align-items: center;
     justify-content: center;
-  }
+  }*/
 
 }
 
