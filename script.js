@@ -2,6 +2,7 @@ const divs = document.querySelectorAll(".colour");
 const regenerateButton = document.getElementById("regenerateButton");
 const copyButtons = document.querySelectorAll('.copy-hex');
 const copiedMessages = document.querySelectorAll('.copied-message');
+const lockButtons = document.querySelectorAll('.lock-toggle');
 
 // Function to generate a random color in hex format
 function generateRandomColorHex() {
@@ -17,23 +18,37 @@ function updatePaletteColor(div, color) {
   div.style.backgroundColor = color;
 }
 
-// Allow users to change each colour
-divs.forEach((div) => {
-  const colourInput = div.querySelector('.colour-input');
-  const initialColor = generateRandomColorHex();
-  updatePaletteColor(div, initialColor);
+// Function to handle lock toggling
+function toggleLock(div, lockButton) {
+  const isLocked = div.classList.toggle('locked');
+  const lockIcon = lockButton.querySelector('.lock-icon');
+  const unlockIcon = lockButton.querySelector('.unlock-icon');
   
-  colourInput.addEventListener('click', () => {
-    const newColor = prompt('Enter a new color code:', '');
-    
-    if (newColor !== null) {
-      updatePaletteColor(div, newColor);
-    } else {
-      alert('Invalid color code. Please enter a valid color code.');
-    }
+  lockIcon.style.display = isLocked ? "inline" : "none";
+  unlockIcon.style.display = isLocked ? "none" : "inline";
+}
+
+// Event listener for lock buttons
+lockButtons.forEach((lockButton, index) => {
+  lockButton.addEventListener('click', () => {
+    toggleLock(divs[index], lockButton);
   });
 });
 
+// Event listener for color input
+divs.forEach((div) => {
+  const colourInput = div.querySelector('.colour-input');
+  colourInput.addEventListener('click', () => {
+    if (!div.classList.contains('locked')) {
+      const newColor = prompt('Enter a new color code:', '');
+      if (newColor !== null) {
+        updatePaletteColor(div, newColor);
+      } else {
+        alert('Invalid color code. Please enter a valid color code.');
+      }
+    }
+  });
+});
 
 // Add event listeners for the Copy buttons
 copyButtons.forEach((copyButton, index) => {
@@ -47,15 +62,17 @@ copyButtons.forEach((copyButton, index) => {
     copiedMessage.classList.add('visible');
     setTimeout(() => {
       copiedMessage.classList.remove('visible');
-    }, 2000); // Hide the message after 2 seconds
+    }, 2000);
   });
 });
 
 // Initial color regeneration
 function regenerateColors() {
   divs.forEach((div) => {
-    const randomColor = generateRandomColorHex();
-    updatePaletteColor(div, randomColor);
+    if (!div.classList.contains('locked')) {
+      const randomColor = generateRandomColorHex();
+      updatePaletteColor(div, randomColor);
+    }
   });
 }
 
@@ -64,6 +81,3 @@ regenerateColors();
 
 // Event listener for regenerate button
 regenerateButton.addEventListener("click", regenerateColors);
-
-
-

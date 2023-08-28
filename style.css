@@ -80,6 +80,10 @@ button, input {
   text-align: center;
 }
 
+.lock-icon {
+  display: none;
+}
+
 #savePaletteButton {
   opacity: 0.5;
   transition: 0.4s;
