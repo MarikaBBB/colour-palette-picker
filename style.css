@@ -73,23 +73,27 @@ button, input {
   border: none;
   outline: none;
   background: none;
+  cursor: pointer;
 }
 
 .colour-input {
   text-align: center;
 }
 
-.lock-toggle {
+#savePaletteButton {
   opacity: 0.5;
   transition: 0.4s;
 }
 
-.lock-toggle.is-locked {
-  opacity: 1;
+.copied-message {
+  display: none; 
+  color: black; 
+  font-size: 14px; 
+  justify-content: center;
 }
 
-button, .lock-toggle {
-  cursor: pointer;
+.copied-message.visible {
+  display: block; 
 }
 
 /* Mobile Portrait Styles */
