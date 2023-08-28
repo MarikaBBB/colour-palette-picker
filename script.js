@@ -1,6 +1,5 @@
 const divs = document.querySelectorAll("div")
 const regenerateButton = document.getElementById("regenerateButton")
-const colourContainers = document.querySelectorAll('.colour');
 
 // Function to create random colors
 function regenerate() {
