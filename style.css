@@ -44,6 +44,27 @@ h1 {
   transition: 0.4s ease-out;
 }
 
+.button-spacing {
+  margin-bottom: 10px; 
+}
+
+#exportButton {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #2980b9;
+  border-radius: 4px;
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.4s ease-out;
+}
+
+
 p {
   margin-top: 10px;
   margin-left: 150px;

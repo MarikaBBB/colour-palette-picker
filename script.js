@@ -66,6 +66,41 @@ copyButtons.forEach((copyButton, index) => {
   });
 });
 
+// Function to extract color data
+function extractColorData() {
+  const colorData = {};
+  
+  divs.forEach((div, index) => {
+    const colorName = `color${index + 1}`;
+    const colorHex = div.querySelector('.colour-input').value;
+    colorData[colorName] = colorHex;
+  });
+  
+  return colorData;
+}
+
+// Function to export to JSON
+function exportColorPaletteToJSON() {
+  const colorData = extractColorData();
+  const colorPaletteJSON = JSON.stringify(colorData, null, 2);
+  
+  // Create a Blob from the JSON data. A blob is a data type that can store binary data.
+  const blob = new Blob([colorPaletteJSON], { type: 'application/json' });
+  
+  // Create a URL for the Blob and create a link for downloading
+  // This URL allows to work with the Blob's content as if it were a regular web resource, like an image or a file hosted on a server.
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'color_palette.json'; // File name
+  
+  // Trigger a click event to start the download
+  a.click();
+  
+  // Clean up by revoking the Blob URL
+  window.URL.revokeObjectURL(url);
+}
+
 // Initial color regeneration
 function regenerateColors() {
   divs.forEach((div) => {
@@ -81,3 +116,7 @@ regenerateColors();
 
 // Event listener for regenerate button
 regenerateButton.addEventListener("click", regenerateColors);
+
+// Add an event listener to the export button
+const exportButton = document.getElementById('exportButton');
+exportButton.addEventListener('click', exportColorPaletteToJSON);
