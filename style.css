@@ -131,20 +131,20 @@ button, input {
   header {
     padding: 10px; 
     flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    align-items:normal;  
   }
 
   h1 {
     font-size: 2rem;
+    text-align: center; 
   }
 
   button {
-    margin-top: 10px; 
+    margin-top: 5px; 
   }
 
   p {
-    margin: 10px; 
+    margin: 5px; 
   }
 
   .colour {
@@ -155,7 +155,7 @@ button, input {
 
   .container {
     align-self: flex-start;
-    /*width: 100px;*/
+    width:fit-content;
     flex-direction: column;
     align-items: stretch; 
     justify-content: flex-start;
