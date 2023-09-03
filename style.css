@@ -71,22 +71,22 @@ p {
 
 /* Colour palette styling */
 .container {
-  display: flex;
-  align-items: stretch;
-  flex: 1;
-}
-
-.container > div {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
   flex: 1;
 }
 
 .colour {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  /*flex: 1; Each color palette element occupy equal space */
   height: 100%;
   font-size: 16px;
+  max-width: 100%;
 }
 
 button, input {
@@ -163,8 +163,9 @@ button, input {
   }
 
   .container > div {
-    width: 100%; 
-    margin: 0; 
+    width: 80%;
+    margin: 5px auto;
+    max-width: 100%; 
   }
 }
 
