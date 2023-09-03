@@ -120,3 +120,5 @@ regenerateButton.addEventListener("click", regenerateColors);
 // Add an event listener to the export button
 const exportButton = document.getElementById('exportButton');
 exportButton.addEventListener('click', exportColorPaletteToJSON);
+
+

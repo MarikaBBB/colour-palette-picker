@@ -15,7 +15,7 @@ body {
   min-height: 100vh;  
 }
 
-
+/* Header */
 header {
   padding: 20px 40px;
   display: flex;
@@ -64,12 +64,12 @@ h1 {
   transition: 0.4s ease-out;
 }
 
-
 p {
   margin-top: 10px;
   margin-left: 150px;
 }
 
+/* Colour palette styling */
 .container {
   display: flex;
   align-items: stretch;
