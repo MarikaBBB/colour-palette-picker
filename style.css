@@ -72,7 +72,9 @@ p {
 /* Colour palette styling */
 .container {
   display:grid;
-  width: 100%;
+ /* width: 100%;*/
+  /*max-width: 120px;*/
+  /*margin: 0 auto;*/
   grid-template-columns: repeat(5, 1fr);
   /*align-items: center;*/
   flex: 1;
@@ -83,7 +85,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1; /*Each color palette element occupy equal space */
+  /*flex: 1; Each color palette element occupy equal space */
   height: 100%;
   font-size: 16px;
 }
@@ -160,10 +162,6 @@ button, input {
     justify-content: space-evenly;
     flex: 1;
     width: 100px;
-  }
-
-  .container > div {
-    width: 100%; 
   }
 }
 
