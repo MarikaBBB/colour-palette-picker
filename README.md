@@ -24,7 +24,8 @@ CSS: Styles the user interface to make it visually appealing and user-friendly.
 JavaScript: Enables the dynamic functionality of generating and customizing colors.
 
 Here are some articles and tutorials that were particularly helpful in building features for this project:
-https://www.freecodecamp.org/news/generate-colors-in-javascript/
-https://www.youtube.com/watch?v=y9F-XzrYIrs
-https://www.freecodecamp.org/news/what-is-json-a-json-file-example/
-https://javascript.info/json
+
+- https://www.freecodecamp.org/news/generate-colors-in-javascript/
+- https://www.youtube.com/watch?v=y9F-XzrYIrs
+- https://www.freecodecamp.org/news/what-is-json-a-json-file-example/
+- https://javascript.info/json
