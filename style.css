@@ -28,7 +28,7 @@ h1 {
   font-weight: 600;
 }
 
-#regenerateButton {
+.button-common {
   vertical-align: middle;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -48,20 +48,9 @@ h1 {
   margin-bottom: 10px; 
 }
 
-#exportButton {
+#exportButton,
+#regenerateButton {
   vertical-align: middle;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  border: 1px solid #2980b9;
-  border-radius: 4px;
-  padding: 5px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #3498db;
-  color: white;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.4s ease-out;
 }
 
 p {
@@ -71,12 +60,8 @@ p {
 
 /* Colour palette styling */
 .container {
-  display:grid;
- /* width: 100%;*/
-  /*max-width: 120px;*/
-  /*margin: 0 auto;*/
+  display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /*align-items: center;*/
   flex: 1;
 }
 
@@ -84,9 +69,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  /*flex: 1; Each color palette element occupy equal space */
-  height: 100%;
   font-size: 16px;
 }
 
@@ -148,20 +130,9 @@ button, input {
     margin: 5px; 
   }
 
-  .colour {
+  .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-
-  .container {
-    align-self: flex-start;
-    width:fit-content;
-    flex-direction: column;
-    align-items: stretch; 
-    justify-content: space-evenly;
-    flex: 1;
-    width: 100px;
   }
 }
 
